@@ -84,7 +84,12 @@
   <ItemGroup>
     <Compile Include="BaseInterface.cs" />
     <Compile Include="MainClass.cs" />
+    <Compile Include="Maths.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="VisitorPattern\AdditionVisitor.cs" />
+    <Compile Include="VisitorPattern\BaseVisitor.cs" />
+    <Compile Include="VisitorPattern\VisitorInterfaces.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="unsecure.snk" />
@@ -95,8 +100,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe Com_Tutorial.dll /codebase /regfile:main.reg
+    <PostBuildEvent>C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe Com_Tutorial.dll /codebase
 </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe Com_Tutorial.dll /unregister</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
