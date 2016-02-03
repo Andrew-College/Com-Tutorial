@@ -19,7 +19,7 @@ namespace Com_Tutorial
 
   [ComVisible(true)]
   [Guid("984EFBD7-E7D1-4A56-B383-3B8167CFAC8E")]
-  [ProgId("COMExtension")]
+  [ProgId("Com_Tutorial")]
   [ClassInterface(ClassInterfaceType.None)]
   public class MainClass : MainInterFace
   {
